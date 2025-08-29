@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cât de Bine Cunoști Lumea?</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/character/owl-neutral.png" alt="Personaj Bufniță" id="quiz-character" class="hidden">
+        <div id="screen-menu" class="screen active">
+            <h1>Cât de Bine Cunoști Lumea?</h1>
+            <div class="game-modes">
+                <button data-quiz-type="capitals" class="btn-mode">Ghicește Capitala</button>
+                <button data-quiz-type="flags" class="btn-mode">Ghicește Steagul</button>
+                <button data-quiz-type="monuments" class="btn-mode">Unde se află monumentul?</button>
+            </div>
+            <div class="high-scores">
+                <h2>Scoruri Maxime</h2>
+                <p>Capitale: <span id="hs-capitals">0</span></p>
+                <p>Steaguri: <span id="hs-flags">0</span></p>
+                <p>Monumente: <span id="hs-monuments">0</span></p>
+            </div>
+        </div>
+
+        <div id="screen-quiz" class="screen">
+            <h2 id="quiz-title"></h2>
+            <div class="quiz-header">
+                <p id="progress-indicator"></p>
+        <p>Scor: <span id="current-score">0</span></p>
+    </div>
+
+    <div class="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="question-container"></div>
+    <div id="options-container" class="options-grid"></div>
+        </div>
+
+        <div id="screen-results" class="screen">
+            <h2>Quiz Terminat!</h2>
+            <p>Scorul tău final: <span id="final-score"></span></p>
+            <p>Cel mai bun scor: <span id="final-highscore"></span></p>
+            <p id="new-highscore-message" class="hidden">Felicitări, ai un nou record!</p>
+            <button id="btn-back-to-menu" class="btn-mode">Meniu Principal</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/gameEngine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
